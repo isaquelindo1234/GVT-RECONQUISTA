@@ -49,7 +49,7 @@ export function LandingPage() {
                 className="w-full py-6 font-bold text-lg"
                 size="lg"
               >
-                <Heart className="mr-2 h-5 w-5" /> Quero Encontrar o Amor
+                <Heart className="mr-2 h-5 w-5" /> I Want to Find Love
               </Button>
             </div>
           </div>
@@ -57,7 +57,7 @@ export function LandingPage() {
       </main>
       <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t px-4 py-6 sm:flex-row md:px-6">
         <p className="text-xs text-muted-foreground">
-          &copy; 2024 Amor Digital. Todos os direitos reservados.
+          &copy; 2024 Digital Love. All rights reserved.
         </p>
       </footer>
     </div>

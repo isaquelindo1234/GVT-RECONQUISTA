@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Amor Digital',
-  description: 'Descubra o Amor na Era Digital',
+  title: 'Digital Love',
+  description: 'Discover Love in the Digital Age',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="en-US" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
