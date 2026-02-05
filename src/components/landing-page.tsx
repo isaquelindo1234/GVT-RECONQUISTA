@@ -49,7 +49,7 @@ export function LandingPage() {
                 className="w-full py-6 font-bold text-lg"
                 size="lg"
               >
-                <Heart className="mr-2 h-5 w-5" /> I Want to Find Love
+                <Heart className="mr-2 h-5 w-5" /> YES! I want to save my relationship
               </Button>
             </div>
           </div>
