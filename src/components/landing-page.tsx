@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ContactForm } from '@/components/contact-form';
-import { PlayCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Heart, PlayCircle } from 'lucide-react';
 
 const vslImage = PlaceHolderImages.find((p) => p.id === 'vsl-thumbnail');
 
@@ -28,8 +28,8 @@ export function LandingPage() {
         </section>
 
         <section id="vsl" className="w-full pb-12 md:pb-24 lg:pb-32">
-          <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
+          <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
+            <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
               <div className="relative aspect-video">
                 {vslImage && (
                   <Image
@@ -48,25 +48,13 @@ export function LandingPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section
-          id="contact"
-          className="w-full bg-muted/50 py-12 md:py-24 lg:py-32"
-        >
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-            <div className="space-y-3">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground md:text-4xl/tight">
-                Pronto para Começar sua Jornada?
-              </h2>
-              <p className="mx-auto max-w-[600px] font-body text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Insira seus dados abaixo para receber acesso exclusivo e dar o
-                primeiro passo para encontrar o amor.
-              </p>
-            </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-              <ContactForm />
+              <Button
+                className="w-full py-6 font-bold text-lg"
+                size="lg"
+              >
+                <Heart className="mr-2 h-5 w-5" /> Quero Encontrar o Amor
+              </Button>
             </div>
           </div>
         </section>
