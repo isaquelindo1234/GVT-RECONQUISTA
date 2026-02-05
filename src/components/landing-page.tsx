@@ -46,10 +46,11 @@ export function LandingPage() {
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
               <Button
-                className="w-full py-6 font-bold text-lg"
+                className="w-full rounded-full py-6 font-bold text-lg animate-gentle-bounce"
                 size="lg"
               >
-                <Heart className="mr-2 h-5 w-5" /> YES! I want to save my relationship
+                <Heart className="mr-2 h-5 w-5" /> YES! I want to save my
+                relationship
               </Button>
             </div>
           </div>
