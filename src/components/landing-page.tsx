@@ -17,10 +17,6 @@ export function LandingPage() {
                   <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl/none">
                     After he left, nothing hurt more than feeling disposable.
                   </h1>
-                  <p className="mx-auto max-w-[600px] font-body text-muted-foreground md:text-xl">
-                    Deixe-nos ajudar você a encontrar uma conexão verdadeira e
-                    duradoura. Assista ao nosso vídeo para saber como.
-                  </p>
                 </div>
               </div>
             </div>
