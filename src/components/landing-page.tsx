@@ -15,7 +15,7 @@ export function LandingPage() {
               <div className="flex flex-col justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl/none">
-                    Descubra o Amor na Era Digital com Amor Digital
+                    After he left, nothing hurt more than feeling disposable.
                   </h1>
                   <p className="mx-auto max-w-[600px] font-body text-muted-foreground md:text-xl">
                     Deixe-nos ajudar você a encontrar uma conexão verdadeira e
