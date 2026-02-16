@@ -10,13 +10,16 @@ export function LandingPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background animate-in fade-in duration-1000">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-1 lg:gap-12 xl:grid-cols-1">
               <div className="flex flex-col justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl xl:text-6xl/none">
-                    After he left, nothing hurt more than feeling disposable.
+                  <h1 className="font-headline text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl max-w-4xl mx-auto leading-snug">
+                    This isn’t about winning him back with perfect words. It’s
+                    about reclaiming the emotional power that made him feel
+                    alive by your side and rebuilding a connection where he
+                    chooses to come back — not out of pity, but out of pure love.
                   </h1>
                 </div>
               </div>
