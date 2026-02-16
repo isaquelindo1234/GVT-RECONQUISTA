@@ -16,10 +16,9 @@ export function LandingPage() {
               <div className="flex flex-col justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <h1 className="font-headline text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl max-w-4xl mx-auto leading-snug">
-                    This isn’t about winning him back with perfect words. It’s
-                    about reclaiming the emotional power that made him feel
-                    alive by your side and rebuilding a connection where he
-                    chooses to come back — not out of pity, but out of pure love.
+                    This isn't about perfect words. It's about becoming the
+                    woman he can't stop thinking about — so he comes back by
+                    choice, not obligation.
                   </h1>
                 </div>
               </div>
