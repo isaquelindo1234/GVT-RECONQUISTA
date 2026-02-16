@@ -49,11 +49,14 @@ export function LandingPage() {
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
               <Button
+                asChild
                 className="w-full rounded-full py-6 font-bold text-lg animate-gentle-bounce"
                 size="lg"
               >
-                <Heart className="mr-2 h-5 w-5" /> YES! I want to save my
-                relationship
+                <a href="https://pay.hotmart.com/I104322873O?checkoutMode=10">
+                  <Heart className="mr-2 h-5 w-5" /> YES! I want to save my
+                  relationship
+                </a>
               </Button>
             </div>
           </div>
