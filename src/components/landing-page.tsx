@@ -10,8 +10,11 @@ export default function LandingPage() {
   const videoAspect = "1.7777777777777777";
   const wistiaEmbed = `<wistia-player media-id="${videoId}" aspect="${videoAspect}"></wistia-player>`;
   const [showButton, setShowButton] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+
     const timer = setTimeout(() => {
       setShowButton(true);
     }, 510000); // 510 seconds
@@ -41,23 +44,27 @@ export default function LandingPage() {
         <section id="vsl" className="w-full pb-12 md:pb-24 lg:pb-32">
           <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
             <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
-              <Script src="https://fast.wistia.com/player.js" async />
-              <Script
-                src={`https://fast.wistia.com/embed/${videoId}.js`}
-                async
-                type="module"
-              />
-              <style>
-                {`
-                  wistia-player[media-id='${videoId}']:not(:defined) {
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${videoId}/swatch');
-                    display: block;
-                    filter: blur(5px);
-                    padding-top: 56.25%;
-                  }
-                `}
-              </style>
-              <div dangerouslySetInnerHTML={{ __html: wistiaEmbed }} />
+              {isClient && (
+                <>
+                  <Script src="https://fast.wistia.com/player.js" async />
+                  <Script
+                    src={`https://fast.wistia.com/embed/${videoId}.js`}
+                    async
+                    type="module"
+                  />
+                  <style>
+                    {`
+                      wistia-player[media-id='${videoId}']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${videoId}/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top: 56.25%;
+                      }
+                    `}
+                  </style>
+                  <div dangerouslySetInnerHTML={{ __html: wistiaEmbed }} />
+                </>
+              )}
             </div>
             {showButton && (
               <div className="mx-auto w-full max-w-sm space-y-2">
