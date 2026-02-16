@@ -1,11 +1,23 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { Heart } from 'lucide-react';
 import Script from 'next/script';
+import { useState, useEffect } from 'react';
 
 export function LandingPage() {
   const videoId = "5u5g58fpw6";
   const videoAspect = "1.7777777777777777";
   const wistiaEmbed = `<wistia-player media-id="${videoId}" aspect="${videoAspect}"></wistia-player>`;
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowButton(true);
+    }, 510000); // 510 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background animate-in fade-in duration-1000">
@@ -47,18 +59,20 @@ export function LandingPage() {
               </style>
               <div dangerouslySetInnerHTML={{ __html: wistiaEmbed }} />
             </div>
-            <div className="mx-auto w-full max-w-sm space-y-2">
-              <Button
-                asChild
-                className="w-full rounded-full py-6 font-bold text-lg animate-gentle-bounce"
-                size="lg"
-              >
-                <a href="https://pay.hotmart.com/I104322873O?checkoutMode=10">
-                  <Heart className="mr-2 h-5 w-5" /> YES! I want to save my
-                  relationship
-                </a>
-              </Button>
-            </div>
+            {showButton && (
+              <div className="mx-auto w-full max-w-sm space-y-2">
+                <Button
+                  asChild
+                  className="w-full rounded-full py-6 font-bold text-lg animate-gentle-bounce"
+                  size="lg"
+                >
+                  <a href="https://pay.hotmart.com/I104322873O?checkoutMode=10">
+                    <Heart className="mr-2 h-5 w-5" /> YES! I want to save my
+                    relationship
+                  </a>
+                </Button>
+              </div>
+            )}
           </div>
         </section>
       </main>
