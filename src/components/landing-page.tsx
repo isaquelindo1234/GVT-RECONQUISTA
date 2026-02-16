@@ -1,11 +1,12 @@
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { Heart, PlayCircle } from 'lucide-react';
-
-const vslImage = PlaceHolderImages.find((p) => p.id === 'vsl-thumbnail');
+import { Heart } from 'lucide-react';
+import Script from 'next/script';
 
 export function LandingPage() {
+  const videoId = "5u5g58fpw6";
+  const videoAspect = "1.7777777777777777";
+  const wistiaEmbed = `<wistia-player media-id="${videoId}" aspect="${videoAspect}"></wistia-player>`;
+
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background animate-in fade-in duration-1000">
       <main className="flex-1">
@@ -26,23 +27,23 @@ export function LandingPage() {
         <section id="vsl" className="w-full pb-12 md:pb-24 lg:pb-32">
           <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
             <div className="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl shadow-2xl">
-              <div className="relative aspect-video">
-                {vslImage && (
-                  <Image
-                    src={vslImage.imageUrl}
-                    alt={vslImage.description}
-                    data-ai-hint={vslImage.imageHint}
-                    fill
-                    className="object-cover"
-                  />
-                )}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                  <button className="text-white/80 transition-colors hover:text-white">
-                    <PlayCircle className="h-20 w-20 md:h-28 md:w-28" />
-                    <span className="sr-only">Play Video</span>
-                  </button>
-                </div>
-              </div>
+              <Script src="https://fast.wistia.com/player.js" async />
+              <Script
+                src={`https://fast.wistia.com/embed/${videoId}.js`}
+                async
+                type="module"
+              />
+              <style>
+                {`
+                  wistia-player[media-id='${videoId}']:not(:defined) {
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${videoId}/swatch');
+                    display: block;
+                    filter: blur(5px);
+                    padding-top: 56.25%;
+                  }
+                `}
+              </style>
+              <div dangerouslySetInnerHTML={{ __html: wistiaEmbed }} />
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
               <Button
