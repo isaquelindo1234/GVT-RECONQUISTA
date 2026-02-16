@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 import Script from 'next/script';
 import { useState, useEffect } from 'react';
 
-export function LandingPage() {
+export default function LandingPage() {
   const videoId = "5u5g58fpw6";
   const videoAspect = "1.7777777777777777";
   const wistiaEmbed = `<wistia-player media-id="${videoId}" aspect="${videoAspect}"></wistia-player>`;
